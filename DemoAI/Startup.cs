@@ -36,10 +36,11 @@ namespace DemoAI
             });
 
             services.AddDbContext<ApplicationDbContext>(options =>
-            //options.UseInMemoryDatabase("DemoAI")
+            options.UseInMemoryDatabase("DemoAI")
+            /*
             options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection"))
-            
+            */
             );
 
             services.AddDefaultIdentity<IdentityUser>()
